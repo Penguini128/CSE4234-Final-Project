@@ -32,19 +32,15 @@ const style = {
         borderRadius: '5px',
         borderWidth: '1px',
         borderColor: colors.lightGray,
-        transition: "transform 0s",
         boxShadow: `${colors.lightGray} 0px 3px 0px 0px`,
         '&:hover': {
-            transition: 'transform 0.15s',
             backgroundColor: colors.hoverLightGray,
             borderColor: colors.midGray,
             boxShadow: `${colors.midGray} 0px 3px 0px 0px`,
             cursor: 'pointer',
-            transform: "translateY(-3px)"
         },
         '&:active': {
-            transition: "transform 0s",
-            transform: 'translateY(0px)',
+            transform: 'translateY(3px)',
             boxShadow: `${colors.midGray} 0px 3px 0px 0px inset`,
         }
     }

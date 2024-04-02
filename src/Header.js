@@ -13,7 +13,7 @@ function Header() {
     function populateDB() {
       console.log("Button clicked!")
       try {
-          fetch('http://localhost:8080/populateDB', {
+          fetch('http://localhost:3000/populateDB', {
               method: 'POST'
           }).then((response) => (
             response.json()
@@ -23,10 +23,8 @@ function Header() {
                     status: true,
                     size: data.amount
                 });
-                console.log('yep');
                 console.log(data.amount);
               } else {
-                console.log('oops');
                 console.log(data);
               }
           })

@@ -1,8 +1,7 @@
 const fs = require('fs').promises;
 const mongoose = require('mongoose');
 const express = require('express');
-const cors = require('cors');
-
+const path =  require('path');
 
 // Loading recipes.json into MongoDB
 let recipeSchema = new mongoose.Schema({
@@ -16,29 +15,35 @@ let recipeSchema = new mongoose.Schema({
 })
 let Recipe = mongoose.model('Recipe', recipeSchema);
 
-
+const port = 3000
 
 
 const app = express();
 
-app.use(cors({
-    origin: 'http://localhost:3000'
-}));
 
+
+app.use(express.static('build'))
 app.use(express.json());
 
 app.get('/', (req, res) => res.send('It\'s working!'))
 
-const port = 8080
 
-app.get('/test', (req, res) => {
-    res.json({ message: 'Data received GET request from the server'});
+
+
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-let diet = 'none';
+app.get('/form', (req, res) => {
+    res.send(diet);
+})
+
+let diet = 'this is a test';
+
+
 
 app.post('/populateDB', (req, res) => {
-    console.log("OH!");
 
     mongoose.connect('mongodb://localhost:27017/RecipesDB')
     .then(() => {
@@ -51,7 +56,7 @@ app.post('/populateDB', (req, res) => {
         })
 
     }).then(() => (
-        fs.readFile('recipes.json')
+        fs.readFile(path.join('src', 'recipes.json'))
     )).then((response) => (
         JSON.parse(response)
     )).then((json) => {
@@ -66,9 +71,7 @@ app.post('/populateDB', (req, res) => {
     })
 })
 
-app.get('/form', (req, res) => {
-    res.send(diet);
-})
+
 
 app.listen(port, () => {
     console.log("Server is running on port", port)

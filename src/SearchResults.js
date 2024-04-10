@@ -1,11 +1,13 @@
 import { useState } from "react";
 
-const SearchResult = () => {
+function SearchResult() {
   const [searchText, setSearchText] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+
   const handleChange = (event) => {
     setSearchText(event.target.value);
   };
+
   const handleSearch = async (searchText) => {
     try {
       const query = `/search?keyword=${encodeURIComponent(searchText)}`;
@@ -15,27 +17,33 @@ const SearchResult = () => {
         throw new Error("Network response was not ok");
       }
       const data = await response.json();
+      console.log(data);
+      setSearchResults([]);
       setSearchResults(data);
     } catch (error) {
       console.error("Error searching recipes:", error);
     }
   };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     handleSearch(searchText);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Search Recipes:
-        <input type="text" value={searchText} onChange={handleChange} />
-      </label>
-      <button type="submit">Search</button>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Search Recipes:
+          <input type="text" onChange={handleChange} />
+        </label>
+        <button type="submit">Search</button>
+      </form>
       {searchResults.map((item) => {
-        <div key={item.cookTime}> {item.name}</div>;
+        console.log(item.name);
+        return (<div key={item.cookTime}>{item.name}</div>)
       })}
-    </form>
+    </div>
   );
 };
 

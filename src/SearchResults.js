@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { createUseStyles } from "react-jss";
+import style from "./Style";
 
 function SearchResult() {
   const [searchText, setSearchText] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const classes = createUseStyles(style)();
 
   const handleChange = (event) => {
     setSearchText(event.target.value);
@@ -33,18 +36,19 @@ function SearchResult() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label>
-          Search Recipes:
-          <input type="text" onChange={handleChange} />
-        </label>
-        <button type="submit">Search</button>
+        <input
+          className={classes.input}
+          type="text"
+          placeholder="&#x1F50D; Find Recipe"
+          onChange={handleChange}
+        />
       </form>
       {searchResults.map((item) => {
         console.log(item.name);
-        return (<div key={item.cookTime}>{item.name}</div>)
+        return <div key={item.cookTime}>{item.name}</div>;
       })}
     </div>
   );
-};
+}
 
 export default SearchResult;

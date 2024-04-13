@@ -53,6 +53,7 @@ const style = {
     borderRadius: "20px",
     width: "400px",
     fontSize: "12px",
+    backgroundColor: "#F2F2F2",
   },
 };
 

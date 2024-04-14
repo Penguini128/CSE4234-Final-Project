@@ -8,7 +8,7 @@ function App() {
   return (
     <div className={classes.mainBody}>
       <Header />
-      <h1>Hello world!</h1>
+      <h1>Recipe Viewer</h1>
       <SearchResult />
     </div>
   );

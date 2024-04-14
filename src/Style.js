@@ -55,6 +55,9 @@ const style = {
     fontSize: "12px",
     backgroundColor: "#F2F2F2",
   },
+  successMessage: {
+    float: "right",
+  },
 };
 
 export default style;

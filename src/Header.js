@@ -34,7 +34,9 @@ function Header() {
   return (
     <div className={classes.mainHeader}>
       {dataBase.status ? (
-        <p>{dataBase.size}</p>
+        <p className={classes.successMessage}>
+          {dataBase.size} recipe(s) successfully added to the database
+        </p>
       ) : (
         <a className={classes.headerItem} onClick={populateDB}>
           Populate DB

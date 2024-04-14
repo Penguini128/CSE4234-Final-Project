@@ -58,6 +58,18 @@ const style = {
   successMessage: {
     float: "right",
   },
+  cardContainer: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(20%, 1fr))',
+    gap: '10px',
+  },
+  recipeCard: {
+    borderRadius: "12px",
+    overflow: "hidden",
+    height: "25em",
+    boxShadow:
+          "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
+  },
 };
 
 export default style;

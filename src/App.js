@@ -1,7 +1,7 @@
 import { createUseStyles } from "react-jss";
 import style from "./Style";
 import Header from "./Header";
-import SearchResult from "./SearchResults";
+import Search from "./Search";
 
 function App() {
   const classes = createUseStyles(style)();
@@ -9,7 +9,7 @@ function App() {
     <div className={classes.mainBody}>
       <Header />
       <h1>Recipe Viewer</h1>
-      <SearchResult />
+      <Search />
     </div>
   );
 }

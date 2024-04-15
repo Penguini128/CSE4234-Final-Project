@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { createUseStyles } from "react-jss";
 import style from "./Style";
-import SearchResults from "./SearchResults"
+import SearchResults from "./SearchResults";
 
 function Search() {
   const [searchText, setSearchText] = useState("");
@@ -36,7 +36,7 @@ function Search() {
   };
 
   return (
-    <div>
+    <div className={classes.bodyItems}>
       <form onSubmit={handleSubmit}>
         <input
           className={classes.input}
@@ -45,9 +45,7 @@ function Search() {
           onChange={handleChange}
         />
       </form>
-      <SearchResults
-        searchResults={searchResults}
-      />
+      <SearchResults searchResults={searchResults} />
     </div>
   );
 }

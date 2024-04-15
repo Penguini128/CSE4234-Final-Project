@@ -6,11 +6,9 @@ function RecipeCard({ recipe }) {
   const classes = createUseStyles(style)();
 
   return (
-    <section
-      className={classes.productRow}
-      key={recipe.id}
-    >
+    <section className={classes.productRow} key={recipe.id}>
       <div className={classes.recipeCard}>
+        <img className={classes.recipeImage} src={recipe.image} />
         <p> {recipe.name} </p>
         <p> {recipe.cookTime} </p>
         <p> {recipe.prepTime} </p>

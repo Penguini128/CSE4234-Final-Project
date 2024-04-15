@@ -59,16 +59,26 @@ const style = {
     float: "right",
   },
   cardContainer: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(20%, 1fr))',
-    gap: '10px',
+    display: "grid",
+    width: "94vw",
+    padding: "2em",
+    gridTemplateColumns: "repeat(auto-fit, minmax(20%, 1fr))",
+    gap: "10px",
   },
   recipeCard: {
     borderRadius: "12px",
     overflow: "hidden",
     height: "25em",
     boxShadow:
-          "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
+      "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
+  },
+  bodyItems: {
+    textAlign: "center",
+  },
+  recipeImage: {
+    width: "100%",
+    height: "50%",
+    objectFit: "cover",
   },
 };
 

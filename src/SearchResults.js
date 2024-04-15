@@ -6,16 +6,10 @@ import RecipeCard from "./RecipeCard";
 function SearchResults({ searchResults }) {
   const classes = createUseStyles(style)();
 
-
   return (
     <div className={classes.cardContainer}>
       {searchResults.map((recipe) => {
-        return (
-          <RecipeCard
-            key={recipe.name}
-            recipe={recipe}
-          />
-        );
+        return <RecipeCard key={recipe.name} recipe={recipe} />;
       })}
     </div>
   );

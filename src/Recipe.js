@@ -11,10 +11,10 @@ function Recipe({ setPopup, recipe }){
 
       return (
         <div>
-            <button onClick={hide}>
-              X
-            </button>
             <div className={classes.recipeCard2}>
+              <button onClick={hide}>
+                X
+              </button>
               <img className={classes.recipeImage} src={recipe.image}  alt = {recipe.name} onError="this.src='./alternate.png';this.onError=null';"/>
               <h3> {recipe.name} </h3>
               <p> <b>Cook Time:</b> {recipe.cookTime}  </p>

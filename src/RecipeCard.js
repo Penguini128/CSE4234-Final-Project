@@ -40,7 +40,7 @@ function RecipeCard({ recipe }) {
           <b>Yield: </b>
           {recipe.recipeYield}
         </p>
-        <button onClick={setPopupTrue}> Default Button
+        <button onClick={setPopupTrue}> Detailed View
         </button>
         {popupVisible ? productPopup : ""}
         </div>

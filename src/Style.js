@@ -94,7 +94,6 @@ const style = {
     margin: 0
   },
   recipeCard2: {
-      display:'flex',
       borderRadius: "12px",
       overflow: "hidden",
       boxShadow:
@@ -102,14 +101,19 @@ const style = {
       textAlignLast: 'left',
       textWrap: 'left',
       paddingLeft: '10px',
-    },
+      position: 'absolute',
+      backgroundColor: 'white',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)'
+  },
     popupWindow: {
         border: "solid",
         borderWidth: "2px",
         borderColor: colors.midGray,
         position: "fixed",
-        top: "50%",
-        left: "50%",
+        top: "30%",
+        left: "30%",
         transform: "translate(-50%, -50%)",
         backgroundColor: colors.lightGray,
         boxShadow: "rgba(0, 0, 0, 0.75) 0px 0px 16px",

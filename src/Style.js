@@ -67,7 +67,7 @@ const style = {
   },
   cardContainer: {
     display: "flex",
-    flexWrap: 'wrap',
+    flexWrap: "wrap",
     padding: "2em",
   },
   recipeCard: {
@@ -77,9 +77,9 @@ const style = {
     boxShadow:
       "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
     backgroundColor: "#F2F2F2",
-    maxWidth: '18%',
-    boxSizing: 'border-box',
-    margin: '1%'
+    maxWidth: "18%",
+    boxSizing: "border-box",
+    margin: "1%",
   },
   recipeImage: {
     width: "100%",
@@ -88,11 +88,11 @@ const style = {
   },
   recipeText: {
     textAlign: "left",
-    padding: "20px",
+    padding: "10px",
   },
   recipeName: {
-    margin: 0
-  }
+    margin: 0,
+  },
 };
 
 export default style;

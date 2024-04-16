@@ -91,8 +91,37 @@ const style = {
     padding: "10px",
   },
   recipeName: {
-    margin: 0,
+    margin: 0
   },
+  recipeCard2: {
+      borderRadius: "12px",
+      overflow: "hidden",
+      boxShadow:
+          "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
+      textAlignLast: 'left',
+      textWrap: 'left',
+      paddingLeft: '10px',
+      position: 'absolute',
+      backgroundColor: 'white',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)'
+  },
+    popupWindow: {
+        border: "solid",
+        borderWidth: "2px",
+        borderColor: colors.midGray,
+        position: "fixed",
+        top: "30%",
+        left: "30%",
+        transform: "translate(-50%, -50%)",
+        backgroundColor: colors.lightGray,
+        boxShadow: "rgba(0, 0, 0, 0.75) 0px 0px 16px",
+        width: "500px",
+        height: "500px",
+        zIndex: "200",
+        padding: "30px",
+      }
 };
 
 export default style;

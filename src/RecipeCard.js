@@ -1,17 +1,25 @@
 import { useState } from "react";
 import { createUseStyles } from "react-jss";
 import style from "./Style";
-import BackupImage from "./alternate.png";
+import BackupImage from './alternate.png';
+import Recipe from './Recipe';
 
 function RecipeCard({ recipe }) {
   const classes = createUseStyles(style)();
   const [useImage, setImage] = useState(recipe.image);
+  const [popupVisible, setPopupVisiblity] = useState(false);
   const cookTime = formatTime(recipe.cookTime);
   const prepTime = formatTime(recipe.prepTime);
 
   const backupImage = (e) => {
     e.target.src = BackupImage;
   };
+
+  const setPopupTrue = () => setPopupVisiblity(true);
+
+  const productPopup = (
+      <Recipe setPopup={setPopupVisiblity} recipe={recipe} />
+    );
 
   return (
     <div className={classes.recipeCard}>
@@ -33,6 +41,10 @@ function RecipeCard({ recipe }) {
           <b>Yield: </b>
           {recipe.recipeYield}
         </p>
+        <button onClick={setPopupTrue}> Detailed View
+        </button>
+        {popupVisible ? productPopup : ""}
+        </div>
       </div>
     </div>
   );

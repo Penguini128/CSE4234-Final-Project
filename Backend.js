@@ -10,7 +10,7 @@ let recipeSchema = new mongoose.Schema({
   image: { type: String, default: "" },
   recipeYield: { type: String, default: "" },
   cookTime: { type: String, default: "" },
-  prepTIme: { type: String, default: "" },
+  prepTime: { type: String, default: "" },
   ingredients: { type: [String], default: "" },
 });
 let Recipe = mongoose.model("Recipe", recipeSchema);

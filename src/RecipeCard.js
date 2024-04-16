@@ -44,7 +44,6 @@ function RecipeCard({ recipe }) {
         <button onClick={setPopupTrue}> Detailed View
         </button>
         {popupVisible ? productPopup : ""}
-        </div>
       </div>
     </div>
   );

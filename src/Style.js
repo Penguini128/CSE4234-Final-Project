@@ -83,6 +83,7 @@ const style = {
   },
   recipeImage: {
     width: "100%",
+    maxWidth: '500px',
     maxHeight: "50%",
     height: "max-content",
   },
@@ -100,28 +101,27 @@ const style = {
           "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
       textAlignLast: 'left',
       textWrap: 'left',
-      paddingLeft: '10px',
-      position: 'absolute',
+      padding: '20px',
+      position: 'fixed',
       backgroundColor: 'white',
       top: '50%',
       left: '50%',
       transform: 'translate(-50%, -50%)'
   },
     popupWindow: {
-        border: "solid",
-        borderWidth: "2px",
-        borderColor: colors.midGray,
         position: "fixed",
-        top: "30%",
-        left: "30%",
-        transform: "translate(-50%, -50%)",
-        backgroundColor: colors.lightGray,
-        boxShadow: "rgba(0, 0, 0, 0.75) 0px 0px 16px",
-        width: "500px",
-        height: "500px",
-        zIndex: "200",
-        padding: "30px",
-      }
+        top: 0,
+        left: 0,
+        width: "100vw",
+        height: "100vh",
+        zIndex: "199",
+        backgroundColor: "#000000A0",
+        boxShadow: "rgba(0, 0, 0, .8) 0px 0px 200px 50px inset",
+    },
+    xButton: {
+        display: 'block',
+        marginBottom: '20px'
+    }
 };
 
 export default style;

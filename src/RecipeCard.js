@@ -52,12 +52,12 @@ function RecipeCard({ recipe }) {
 
 const formatTime = (duration) => {
   if (!duration) {
-    return "00:00"; // catch null values
+    return "N/A"; // catch null values
   }
   const hourString = duration.match(/(\d+)H/); // use regex to capture value from predetermined string pattern
   const minuteString = duration.match(/(\d+)M/);
 
-  const hours = hourString ? String(hourString[1]).padStart(2, "0") : "00";
+  const hours = hourString ? String(hourString[1]).padStart(2, "0") : "00"; // pads with 0s
   const minutes = minuteString
     ? String(minuteString[1]).padStart(2, "0")
     : "00";

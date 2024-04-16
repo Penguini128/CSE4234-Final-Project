@@ -80,6 +80,11 @@ const style = {
     width: "18%",
     boxSizing: "border-box",
     margin: "1%",
+    '@media screen and (max-width: 1000px)': {
+        display: 'block',
+        width: "100%",
+        margin: '15px 0px 15px 0px'
+    }
   },
   recipeImage: {
     width: "100%",
@@ -106,7 +111,9 @@ const style = {
       backgroundColor: 'white',
       top: '50%',
       left: '50%',
-      transform: 'translate(-50%, -50%)'
+      transform: 'translate(-50%, -50%)',
+      width: "75vw",
+      height: "75vh"
   },
     popupWindow: {
         position: "fixed",

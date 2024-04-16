@@ -50,6 +50,13 @@ const style = {
       boxShadow: `${colors.midGray} 0px 3px 0px 0px inset`,
     },
   },
+  successMessage: {
+    float: "right",
+  },
+  bodyItems: {
+    textAlign: "center",
+    width: "100%",
+  },
   input: {
     padding: "10px",
     border: "1px solid #808080",
@@ -58,32 +65,28 @@ const style = {
     fontSize: "12px",
     backgroundColor: "#F2F2F2",
   },
-  successMessage: {
-    float: "right",
-  },
   cardContainer: {
     display: "grid",
-    width: "94vw",
     padding: "2em",
-    gridTemplateColumns: "repeat(auto-fit, minmax(20%, 1fr))",
-    gap: "15px",
+    gridTemplateColumns: "repeat(auto-fit, minmax(18%, 1fr))",
+    gap: "2em",
   },
   recipeCard: {
     borderRadius: "12px",
     overflow: "hidden",
-    // width: "calc(100% / 5 - 10px)",
     height: "25em",
     boxShadow:
       "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
     backgroundColor: "#F2F2F2",
   },
-  bodyItems: {
-    textAlign: "center",
-  },
   recipeImage: {
     width: "100%",
-    height: "50%",
-    objectFit: "cover",
+    maxHeight: "50%",
+    height: "max-content",
+  },
+  recipeText: {
+    textAlign: "left",
+    paddingLeft: "10px",
   },
 };
 

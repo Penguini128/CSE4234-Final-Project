@@ -13,7 +13,6 @@ function RecipeCard({ recipe }) {
   }
 
   return (
-    <section className={classes.productRow} key={recipe.id}>
       <div className={classes.recipeCard}>
         <img
           className={classes.recipeImage}
@@ -21,8 +20,8 @@ function RecipeCard({ recipe }) {
           alt={recipe.name}
           onError={backupImage}
         />
-        <div className={classes.recipeText}></div>
-        <h3> {recipe.name} </h3>
+        <div className={classes.recipeText}>
+        <h3 className={classes.recipeName}> {recipe.name} </h3>
         <p>
           <b>Cook Time: </b>
           {recipe.cookTime}
@@ -33,8 +32,8 @@ function RecipeCard({ recipe }) {
           <b>Yield: </b>
           {recipe.recipeYield}
         </p>
+        </div>
       </div>
-    </section>
   );
 }
 

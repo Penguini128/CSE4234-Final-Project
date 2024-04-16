@@ -81,4 +81,6 @@ app.post("/populateDB", (req, res) => {
 
 app.listen(port, () => {
   console.log("Server is running on port", port);
+
+  console.log(`\nGo to localhost:${port} to view site`);
 });

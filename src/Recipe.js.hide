@@ -1,0 +1,28 @@
+import {createUseStyles} from "react-jss";
+import style from "./Style";
+
+function Recipe({ recipe }){
+    // const classes = createUseStyles(style)();
+    console.log("hi");
+
+    return (
+        /*<section className={classes.cardContainer} key={recipe.id}>
+            <div className={classes.recipeCard2}>
+                <img className={classes.recipeImage} src={recipe.image}  alt = {recipe.name} onError="this.src='./alternate.png';this.onError=null';"/>
+
+                <h3> {recipe.name} </h3>
+                <p> <b>Cook Time:</b> {recipe.cookTime}  </p>
+                <p> <b>Prep Time: </b>{recipe.prepTime} </p>
+                <p> <b>Yield: </b>{recipe.recipeYield} </p>
+                <p> {recipe.description}</p>
+
+                <h3>Ingredients</h3>
+                <li>{recipe.ingredients}</li>
+
+            </div>
+        </section>*/
+        <div> <h1> fluffy bunny </h1> </div>
+    );
+}
+
+export default Recipe;

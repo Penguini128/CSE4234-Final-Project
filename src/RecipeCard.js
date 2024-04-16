@@ -10,7 +10,6 @@ function RecipeCard({ recipe }) {
   const prepTime = formatTime(recipe.prepTime);
 
   const backupImage = (e) => {
-    console.log("Using backup image!");
     e.target.src = BackupImage;
   };
 
